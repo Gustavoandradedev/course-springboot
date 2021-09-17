@@ -12,9 +12,9 @@ import br.com.zupinnovation.coursespringboot.entities.pk.OrderItemPK;
 
 @Entity
 @Table(name = "tb_order_item")
-public class OrderItem implements Serializable{
+public class OrderItem implements Serializable {
 
-	private static final long serialVersionUID = 1L; 
+	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
 	private OrderItemPK id = new OrderItemPK();
@@ -36,12 +36,11 @@ public class OrderItem implements Serializable{
 	public Order getOrder() {
 		return id.getOrder();
 	}
-	
+
 	public void setOrder(Order order) {
 		id.setOrder(order);
 	}
-	
-	
+
 	public Integer getQuantity() {
 		return quantity;
 	}
@@ -57,11 +56,11 @@ public class OrderItem implements Serializable{
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
+
 	public Product getProduct() {
 		return id.getProduct();
 	}
-	
+
 	public void setProduct(Product product) {
 		id.setProduct(product);
 	}
@@ -91,5 +90,4 @@ public class OrderItem implements Serializable{
 		return true;
 	}
 
-	
 }
